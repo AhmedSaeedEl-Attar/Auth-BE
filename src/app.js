@@ -14,6 +14,7 @@ const dbConnect = require("./config/dbConnect");
 const rootRouter = require("./routes/root");
 const authRouter = require("./routes/authRoutes");
 const usersRouter = require("./routes/usersRoutes");
+const productsRouter = require("./routes/productRoutes");
 
 app.use(express.json());
 
@@ -26,6 +27,7 @@ app.use(cors(corsOptions));
 app.use("/", rootRouter);
 app.use("/auth", authRouter);
 app.use("/users", usersRouter);
+app.use("/products", productsRouter);
 
 // Database Connection
 dbConnect();

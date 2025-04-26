@@ -34,7 +34,7 @@ const register = async (req, res) => {
     },
     ACCESS_TOKEN_SECRET,
     {
-      expiresIn: "15m",
+      expiresIn: "1m",
     }
   );
   const refreshToken = jwt.sign(
